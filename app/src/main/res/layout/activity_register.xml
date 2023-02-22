@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".layout.RegisterActivity">
+
+    <!--    MAIN LAYOUT-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Sign Up"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/form_layout_login"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+<!--        EMAIL INPUT-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Masukan Alamat Email"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/custom_person_icon"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="contoh@gmail.com"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+<!--        EMAIL INPUT-->
+
+<!--        USERNAME INPUT-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Masukan Username"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/custom_person_icon"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Herman"
+                android:inputType="text" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+<!--        USERNAME INPUT-->
+
+<!--        NO HANDPON INPUT-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Masukan No Handphone"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            app:endIconMode="clear_text">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/custom_person_icon"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="081234567890"
+                android:inputType="phone" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+<!--        NO HANDPON INPUT-->
+
+<!--        PASSWORD-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Masukan Kata Sandi"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/custom_lock_icon"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Min 8 karakter"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Konfirmasi Kata Sandi"
+            android:textAlignment="viewStart"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="10dp"/>
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:hintEnabled="false"
+            app:endIconMode="password_toggle">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@drawable/custom_lock_icon"
+                android:drawablePadding="6dp"
+                android:fontFamily="@font/poppins_regular"
+                android:hint="Min 8 karakter"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+<!--        PASSWORD-->
+
+<!--        LOGIN BACK-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Sudah Punya Akun ?"
+                android:textColor="@color/black"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/btn_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:clickable="true"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Sign In Sekarang"
+                android:textColor="@color/primary1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:focusable="true" />
+
+        </LinearLayout>
+<!--        LOGIN BACK-->
+
+    </LinearLayout>
+
+    </LinearLayout>
+    <!--    MAIN LAYOUT-->
+
+</ScrollView>
