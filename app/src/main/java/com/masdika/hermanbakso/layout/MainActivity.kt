@@ -3,16 +3,17 @@ package com.masdika.hermanbakso.layout
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.masdika.hermanbakso.R
-import com.masdika.hermanbakso.databinding.ActivityLoginBinding
+import com.masdika.hermanbakso.databinding.ActivityMainBinding
 
-class LoginActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
 
-    // viewBinding
-    private lateinit var binding: ActivityLoginBinding
+//    viewBinding
+    private lateinit var binding : ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityLoginBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
     }
 }
