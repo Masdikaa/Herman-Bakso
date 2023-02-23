@@ -52,9 +52,10 @@
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/custom_person_icon"
+                android:drawableStart="@drawable/custom_email_icon"
                 android:drawablePadding="6dp"
                 android:fontFamily="@font/poppins_regular"
                 android:hint="contoh@gmail.com"
@@ -82,6 +83,7 @@
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_username"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/custom_person_icon"
@@ -112,9 +114,10 @@
             app:endIconMode="clear_text">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_hp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/custom_person_icon"
+                android:drawableStart="@drawable/custom_phone_icon"
                 android:drawablePadding="6dp"
                 android:fontFamily="@font/poppins_regular"
                 android:hint="081234567890"
@@ -142,6 +145,7 @@
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_password"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/custom_lock_icon"
@@ -170,6 +174,7 @@
             app:endIconMode="password_toggle">
 
             <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input_password2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:drawableStart="@drawable/custom_lock_icon"
@@ -181,11 +186,28 @@
         </com.google.android.material.textfield.TextInputLayout>
 <!--        PASSWORD-->
 
+<!--        BUTTON REGISTER-->
+        <Button
+            android:id="@+id/btn_register"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="Register"
+            android:layout_marginTop="18dp"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            tools:ignore="VisualLintButtonSize"
+            android:background="@drawable/custom_button_1"
+            android:focusable="true" />
+<!--        BUTTON REGISTER-->
+
 <!--        LOGIN BACK-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="30dp"
             android:gravity="center_horizontal"
             android:orientation="horizontal">
 
@@ -205,12 +227,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:clickable="true"
+                android:focusable="true"
                 android:fontFamily="@font/poppins_medium"
                 android:text="Sign In Sekarang"
                 android:textColor="@color/primary1"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:focusable="true" />
+                tools:ignore="TouchTargetSizeCheck" />
 
         </LinearLayout>
 <!--        LOGIN BACK-->
