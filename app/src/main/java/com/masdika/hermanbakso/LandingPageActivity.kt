@@ -1,6 +1,5 @@
 package com.masdika.hermanbakso
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -93,6 +92,7 @@ class LandingPageActivity : AppCompatActivity() {
         }
     }
 
+//    DOT INDIKATOR IMAGE SLIDER
     private fun setIndicator() {
         for (i in 0 until list.size) {
             dots.add(TextView(this))
@@ -101,6 +101,7 @@ class LandingPageActivity : AppCompatActivity() {
             binding.dotsIndicator.addView(dots[i])
         }
     }
+//    DOT INDIKATOR IMAGE SLIDER
 
     override fun onStart() {
         super.onStart()

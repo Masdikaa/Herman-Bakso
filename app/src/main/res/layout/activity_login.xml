@@ -68,7 +68,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="2dp"
                 android:fontFamily="@font/poppins_medium"
-                android:text="Masukan Username"
+                android:text="Masukan Email"
                 android:textAlignment="viewStart"
                 android:textColor="@color/black"
                 android:textSize="15sp" />
@@ -80,14 +80,14 @@
                 app:endIconMode="clear_text">
 
                 <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_username"
+                    android:id="@+id/input_email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/custom_person_icon"
+                    android:drawableStart="@drawable/custom_email_icon"
                     android:drawablePadding="6dp"
                     android:fontFamily="@font/poppins_regular"
-                    android:hint="Username"
-                    android:inputType="text" />
+                    android:hint="Email"
+                    android:inputType="textEmailAddress" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
