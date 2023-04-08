@@ -20,10 +20,10 @@
         <androidx.cardview.widget.CardView
             android:layout_width="100dp"
             android:layout_height="100dp"
-            app:cardCornerRadius="100dp"
             android:layout_marginTop="45dp"
             android:outlineAmbientShadowColor="@android:color/holo_red_light"
-            android:outlineSpotShadowColor="@android:color/holo_red_light">
+            android:outlineSpotShadowColor="@android:color/holo_red_light"
+            app:cardCornerRadius="100dp">
 
             <ImageView
                 android:layout_width="match_parent"
@@ -137,17 +137,17 @@
 
             <Button
                 android:id="@+id/btn_login"
-                android:clickable="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@drawable/custom_button_1"
                 android:layout_marginBottom="10dp"
+                android:background="@drawable/custom_button_1"
+                android:clickable="true"
+                android:focusable="true"
                 android:fontFamily="@font/poppins_medium"
                 android:text="Continue"
                 android:textAllCaps="false"
                 android:textColor="@color/white"
-                tools:ignore="VisualLintButtonSize"
-                android:focusable="true" />
+                tools:ignore="VisualLintButtonSize" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
@@ -228,12 +228,12 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="10dp"
                     android:clickable="true"
+                    android:focusable="true"
                     android:fontFamily="@font/poppins_medium"
                     android:text="Daftar Sekarang !"
                     android:textColor="@color/primary1"
                     android:textSize="16sp"
-                    android:textStyle="bold"
-                    android:focusable="true" />
+                    android:textStyle="bold" />
 
             </LinearLayout>
 

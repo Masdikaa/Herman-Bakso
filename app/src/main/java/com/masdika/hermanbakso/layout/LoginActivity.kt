@@ -15,7 +15,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     // viewBinding
     private lateinit var binding: ActivityLoginBinding
-
     // Firebase auth
     private lateinit var auth: FirebaseAuth
 
@@ -26,7 +25,11 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         setContentView(binding.root)
 
         binding.btnRegister.setOnClickListener(this)
-        binding.btnLogin.setOnClickListener(this)
+        //binding.btnLogin.setOnClickListener(this)
+        binding.btnLogin.setOnClickListener {
+            startActivity(Intent(this,MainActivity::class.java))
+            finish()
+        }
 
     }
 

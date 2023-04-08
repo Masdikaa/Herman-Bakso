@@ -20,4 +20,9 @@
     <color name="gray">#6B728E</color>
 <!--    MY PALETTE-->
 
+    <color name="electric_blue">#7DF9FF</color>
+    <color name="pastel_blue">#A7C7E7</color>
+    <color name="sky_blue">#87CEEB</color>
+    <color name="baby_blue">#89CFF0</color>
+
 </resources>

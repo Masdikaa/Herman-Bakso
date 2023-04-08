@@ -35,7 +35,6 @@ android {
     buildFeatures{
         viewBinding true
     }
-
 }
 
 dependencies {
@@ -47,6 +46,9 @@ dependencies {
     implementation 'com.google.firebase:firebase-core:21.1.1'
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.3'
     implementation 'com.google.firebase:firebase-database-ktx:20.1.0'
+
+    //NAVIGATION BAR
+    implementation 'com.google.android.material:material:1.3.0-alpha03'
 
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.6.1'
