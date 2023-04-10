@@ -317,8 +317,9 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="outputName" value="baseline_search_24" />
-                            <entry key="sourceFile" value="C:\Users\acer\AndroidStudioProjects\Android\Herman-Bakso" />
+                            <entry key="assetSourceType" value="FILE" />
+                            <entry key="outputName" value="menu_icon" />
+                            <entry key="sourceFile" value="C:\Users\acer\Downloads\menu-button-wide-fill.svg" />
                           </map>
                         </option>
                       </PersistentState>
