@@ -15,6 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HermanBakso"
         tools:targetApi="31">
+
         <activity
             android:name=".LandingPageActivity"
             android:exported="true"
@@ -22,7 +23,6 @@
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
 
