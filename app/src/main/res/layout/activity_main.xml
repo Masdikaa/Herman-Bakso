@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".layout.MainActivity">
+    tools:context=".activity.MainActivity">
 
 <!--    Frame layout untuk menampung fragment Menu, Catatan, dan Riwayat-->
     <FrameLayout

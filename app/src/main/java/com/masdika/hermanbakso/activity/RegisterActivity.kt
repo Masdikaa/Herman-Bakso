@@ -1,4 +1,4 @@
-package com.masdika.hermanbakso.layout
+package com.masdika.hermanbakso.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity

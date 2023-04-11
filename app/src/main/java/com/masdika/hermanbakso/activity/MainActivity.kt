@@ -1,4 +1,4 @@
-package com.masdika.hermanbakso.layout
+package com.masdika.hermanbakso.activity
 
 import android.os.Bundle
 import android.util.Log
@@ -32,18 +32,22 @@ class MainActivity : AppCompatActivity() {
             ) {
                 Log.d("Bottom_Bar", "Selected index: $newIndex, title: ${newTab.title}")
                 when (newTab.id) {
+                    // Get ID from nav_menu
                     R.id.tab_menu -> {
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.frame_ly, MenuFragment()).commit()
                     }
+
                     R.id.tab_catatan -> {
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.frame_ly, CatatanFragment()).commit()
                     }
+
                     R.id.tab_riwayat -> {
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.frame_ly, RiwayatFragment()).commit()
                     }
+
                 }
             }
         })

@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.masdika.hermanbakso.R
 import com.masdika.hermanbakso.databinding.FragmentMenuBinding
 
 private var _binding: FragmentMenuBinding? = null
@@ -17,7 +16,7 @@ class MenuFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        _binding = FragmentMenuBinding.inflate(inflater,container,false)
+        _binding = FragmentMenuBinding.inflate(inflater, container, false)
         return binding.root
     }
 

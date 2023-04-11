@@ -1,18 +1,18 @@
-package com.masdika.hermanbakso
+package com.masdika.hermanbakso.activity
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.text.Html
 import android.util.Log
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
+import com.masdika.hermanbakso.R
 import com.masdika.hermanbakso.adapter.ImageSliderAdapter
 import com.masdika.hermanbakso.databinding.ActivityLandingPageBinding
-import com.masdika.hermanbakso.layout.LoginActivity
 import com.masdika.hermanbakso.model.ImageData
 
 class LandingPageActivity : AppCompatActivity() {
@@ -30,10 +30,14 @@ class LandingPageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLandingPageBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        //Menjalankan Image Slider
+
+        // Change status bar color into white
+        window.statusBarColor = ContextCompat.getColor(this, R.color.white)
+
+        // Running Image Slider
         runSlider()
 
-
+        // btnStart Listener
         binding.btnStart.setOnClickListener {
             startActivity(Intent(this, LoginActivity::class.java))
         }
@@ -92,7 +96,7 @@ class LandingPageActivity : AppCompatActivity() {
         }
     }
 
-//    DOT INDIKATOR IMAGE SLIDER
+    //    DOT INDIKATOR IMAGE SLIDER
     private fun setIndicator() {
         for (i in 0 until list.size) {
             dots.add(TextView(this))

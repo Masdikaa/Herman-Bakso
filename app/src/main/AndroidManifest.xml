@@ -17,7 +17,7 @@
         tools:targetApi="31">
 
         <activity
-            android:name=".LandingPageActivity"
+            android:name=".activity.LandingPageActivity"
             android:exported="true"
             android:theme="@style/Theme.HermanBakso.Light">
 
@@ -28,17 +28,17 @@
 
         </activity>
         <activity
-            android:name=".layout.RegisterActivity"
+            android:name=".activity.RegisterActivity"
             android:exported="false"
             android:theme="@style/Theme.HermanBakso.Light" />
         <activity
-            android:name=".layout.LoginActivity"
+            android:name=".activity.LoginActivity"
             android:exported="true"
             android:theme="@style/Theme.HermanBakso.Light">
 
         </activity>
         <activity
-            android:name=".layout.MainActivity"
+            android:name=".activity.MainActivity"
             android:exported="false"
             android:theme="@style/Theme.HermanBakso.Light" />
     </application>

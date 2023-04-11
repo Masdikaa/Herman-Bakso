@@ -1,4 +1,4 @@
-package com.masdika.hermanbakso.layout
+package com.masdika.hermanbakso.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import com.masdika.hermanbakso.R
 import com.masdika.hermanbakso.databinding.ActivityLoginBinding
@@ -15,6 +16,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
 
     // viewBinding
     private lateinit var binding: ActivityLoginBinding
+
     // Firebase auth
     private lateinit var auth: FirebaseAuth
 
@@ -24,10 +26,13 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        // Change status bar color into white
+        window.statusBarColor = ContextCompat.getColor(this, R.color.white)
+
         binding.btnRegister.setOnClickListener(this)
         //binding.btnLogin.setOnClickListener(this)
         binding.btnLogin.setOnClickListener {
-            startActivity(Intent(this,MainActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
 
@@ -72,7 +77,7 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             .addOnCompleteListener(this) {
                 if (it.isSuccessful) {
                     Toast.makeText(this, "Selamat Datang", Toast.LENGTH_SHORT).show()
-                    startActivity(Intent(this,MainActivity::class.java))
+                    startActivity(Intent(this, MainActivity::class.java))
                 } else {
                     Toast.makeText(
                         this,
