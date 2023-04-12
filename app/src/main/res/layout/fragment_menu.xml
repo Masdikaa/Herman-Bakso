@@ -17,7 +17,7 @@
             android:id="@+id/cv1"
             android:layout_width="match_parent"
             android:layout_height="400dp"
-            android:layout_marginTop="-280dp"
+            android:layout_marginTop="-250dp"
             android:backgroundTint="@color/primary1"
             app:cardCornerRadius="20dp">
 
@@ -38,7 +38,7 @@
 
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="match_parent"
+                        android:layout_height="wrap_content"
                         android:gravity="center"
                         android:orientation="vertical">
 
@@ -46,7 +46,7 @@
                         <com.google.android.material.textfield.TextInputLayout
                             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                             android:layout_width="match_parent"
-                            android:layout_height="match_parent"
+                            android:layout_height="wrap_content"
                             android:layout_marginHorizontal="5dp"
                             android:layout_marginTop="2dp"
                             android:layout_marginBottom="5dp"
@@ -105,8 +105,16 @@
                     android:text="Jajan" />
 
             </com.google.android.material.tabs.TabLayout>
-        </LinearLayout>
 
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_menu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="33dp"
+                tools:listitem="@layout/list_item_menu" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

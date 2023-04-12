@@ -1,5 +1,23 @@
 <resources>
     <string name="app_name">Herman Bakso</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="bakso_urat">Bakso Urat</string>
+    <string name="bakso_urat_price">Rp16.000,-</string>
+    <string name="bakso_pedas">Bakso Pedas</string>
+    <string name="bakso_pedas_price">Rp16.000,-</string>
+    <string name="bakso_pedas_jumbo">Bakso Pedas Jumbo</string>
+    <string name="bakso_pedas_jumbo_price">Rp24.000,-</string>
+    <string name="bakso_tuna">Bakso Tuna</string>
+    <string name="bakso_tuna_price">Rp15.000,-</string>
+    <string name="bakso_tahu">Bakso Tahu</string>
+    <string name="bakso_tahu_price">Rp10.000,-</string>
+    <string name="bakso_lava_kematian">Bakso Lava Kematian</string>
+    <string name="bakso_lava_kematian_price">Rp30.000,-</string>
+    <string name="mie_ayam_bakso">Mie Ayam Bakso</string>
+    <string name="mie_ayam_bakso_price">Rp12.000,-</string>
+    <string name="mie_ayam_bakso_ceker">Mie Ayam Bakso Ceker</string>
+    <string name="mie_ayam_bakso_ceker_price">Rp15.000,-</string>
+    <string name="mie_ayam_babi">Mie Ayam Babi</string>
+    <string name="mie_ayam_babi_price">Rp25.000,-</string>
+
 </resources>

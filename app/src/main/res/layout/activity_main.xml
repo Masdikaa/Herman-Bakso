@@ -7,16 +7,15 @@
     android:orientation="vertical"
     tools:context=".activity.MainActivity">
 
-<!--    Frame layout untuk menampung fragment Menu, Catatan, dan Riwayat-->
+    <!--    Frame layout untuk menampung fragment Menu, Catatan, dan Riwayat-->
     <FrameLayout
         android:id="@+id/frame_ly"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/bottom_bar"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/bottom_bar">
-    </FrameLayout>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <!--    Animated Bottom Navigation Bar-->
     <nl.joery.animatedbottombar.AnimatedBottomBar

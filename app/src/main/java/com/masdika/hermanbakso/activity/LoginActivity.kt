@@ -35,7 +35,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             startActivity(Intent(this, MainActivity::class.java))
             finish()
         }
-
     }
 
     override fun onClick(v: View) {
