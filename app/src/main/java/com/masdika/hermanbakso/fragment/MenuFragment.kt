@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -26,7 +27,6 @@ class MenuFragment : Fragment() {
     lateinit var menuTitle: Array<String>
     lateinit var menuPrice: Array<String>
 
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,17 +38,11 @@ class MenuFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Initiating data from recycle view
         dataInitialize()
-        recyclerView = binding.recyclerViewMenu
-        recyclerView.layoutManager = LinearLayoutManager(context)
-        recyclerView.setHasFixedSize(true)
-        adapter = MenuAdapter(menuArrayList)
-        recyclerView.adapter = adapter
     }
 
     private fun dataInitialize() {
-        menuArrayList = arrayListOf<MenuMakananData>()
-
         menuTitle = arrayOf(
             getString(R.string.bakso_tahu),
             getString(R.string.bakso_tuna),
@@ -60,7 +54,6 @@ class MenuFragment : Fragment() {
             getString(R.string.mie_ayam_bakso_ceker),
             getString(R.string.mie_ayam_babi)
         )
-
         menuPrice = arrayOf(
             getString(R.string.bakso_tahu_price),
             getString(R.string.bakso_tuna_price),
@@ -72,7 +65,6 @@ class MenuFragment : Fragment() {
             getString(R.string.mie_ayam_bakso_ceker_price),
             getString(R.string.mie_ayam_babi_price),
         )
-
         menuImage = arrayOf(
             R.drawable.bakso_tahu,
             R.drawable.bakso_tuna,
@@ -84,11 +76,24 @@ class MenuFragment : Fragment() {
             R.drawable.mie_ayam_bakso_ceker,
             R.drawable.mie_babi
         )
+        recyclerView = binding.recyclerViewMenu
+        recyclerView.layoutManager = LinearLayoutManager(context)
+        recyclerView.setHasFixedSize(true)
+        menuArrayList = arrayListOf()
+        getData()
+    }
 
+    private fun getData() {
         for (i in menuImage.indices) {
             val dataMenuMakanan = MenuMakananData(menuTitle[i], menuPrice[i], menuImage[i])
             menuArrayList.add(dataMenuMakanan)
         }
-
+        adapter = MenuAdapter(menuArrayList)
+        recyclerView.adapter = adapter
+        adapter.setOnItemClickListener(object : MenuAdapter.onItemClickListener {
+            override fun onItemClick(position: Int) {
+                Toast.makeText(context, "Clicked : $position", Toast.LENGTH_SHORT).show()
+            }
+        })
     }
 }

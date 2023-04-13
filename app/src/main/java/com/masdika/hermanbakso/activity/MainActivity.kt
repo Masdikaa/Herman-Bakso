@@ -37,12 +37,10 @@ class MainActivity : AppCompatActivity() {
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.frame_ly, MenuFragment()).commit()
                     }
-
                     R.id.tab_catatan -> {
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.frame_ly, CatatanFragment()).commit()
                     }
-
                     R.id.tab_riwayat -> {
                         supportFragmentManager.beginTransaction()
                             .replace(R.id.frame_ly, RiwayatFragment()).commit()

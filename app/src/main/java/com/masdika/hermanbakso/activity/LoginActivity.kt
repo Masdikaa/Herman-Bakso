@@ -43,7 +43,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
             R.id.btn_login -> {
                 val email = binding.inputEmail.text.toString()
                 val password = binding.inputPassword.text.toString()
-
                 //Validasi
                 if (email.isEmpty()) {
                     binding.inputEmail.error = "Email belum di isi"
@@ -62,7 +61,6 @@ class LoginActivity : AppCompatActivity(), View.OnClickListener {
                     loginFirebase(email, password)
                 }
             }
-
             R.id.btn_register -> {
                 startActivity(Intent(this, RegisterActivity::class.java))
                 finish()

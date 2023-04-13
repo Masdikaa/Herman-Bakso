@@ -9,13 +9,25 @@ import androidx.recyclerview.widget.RecyclerView
 import com.masdika.hermanbakso.R
 import com.masdika.hermanbakso.model.MenuMakananData
 
-class MenuAdapter(private val menuList: ArrayList<MenuMakananData>) :
+class MenuAdapter(
+    private val menuList: ArrayList<MenuMakananData>
+) :
     RecyclerView.Adapter<MenuAdapter.MenuViewHolder>() {
+
+    private lateinit var mListener: onItemClickListener
+
+    interface onItemClickListener {
+        fun onItemClick(position: Int)
+    }
+
+    fun setOnItemClickListener(listener: onItemClickListener) {
+        mListener = listener
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MenuViewHolder {
         val itemView =
             LayoutInflater.from(parent.context).inflate(R.layout.list_item_menu, parent, false)
-        return MenuViewHolder(itemView)
+        return MenuViewHolder(itemView, mListener)
     }
 
     override fun getItemCount(): Int {
@@ -29,11 +41,18 @@ class MenuAdapter(private val menuList: ArrayList<MenuMakananData>) :
         holder.menuImage.setImageResource(currentItem.menuImage)
     }
 
-    class MenuViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class MenuViewHolder(itemView: View, listener: onItemClickListener) :
+        RecyclerView.ViewHolder(itemView) {
 
         val menuTitle: TextView = itemView.findViewById(R.id.menu_title)
         val menuPrice: TextView = itemView.findViewById(R.id.menu_price)
         val menuImage: ImageView = itemView.findViewById(R.id.img_menu)
+
+        init {
+            itemView.setOnClickListener {
+                listener.onItemClick(absoluteAdapterPosition)
+            }
+        }
 
     }
 }
